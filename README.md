@@ -1,8 +1,15 @@
 # NGINX-Reverse-Proxy
 
+## Reverse Proxy
+```markdown
+# This is a method to host a Backend server where an Application is running, this is NOT for hosting a Static content.
+  Reverse proxy server sits in front of a backend server and redirect the traffic to the backend server and hide this
+  backend server from external exposure.
+```
+
 ## The Architecture
 1. One Nginx server and one Backend server where the application is running on some port(eg. 3000)
-2. Client will hit Public IP of Nginx server, this Nginx server will work as reverse proxy server, where it get the request it will redirect the traffic to Backend Server's particular port.
+2. Client will hit Public IP of Nginx server, this Nginx server will work as reverse proxy server, when it receives the request it will redirect the traffic to Backend Server's particular port.
 3. Allow all traffic in your both server as it is for testing purpose, otherwise for secure communication allow `http` on port `80` and `SSH` on port `22` in `Nginx` server and `http` on some port like `3000` in `Application` server.
 
 ## Launch Flask Application on `Application` server
