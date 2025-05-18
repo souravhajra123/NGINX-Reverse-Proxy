@@ -2,7 +2,8 @@
 
 ## Reverse Proxy
 ```markdown
-# This is a method to host a Backend server where an Application is running, this is NOT for hosting a Static content.
+#  Concept:
+  This is a method to host a Backend server where an Application is running, this is NOT for hosting a Static content.
   Reverse proxy server sits in front of a backend server and redirect the traffic to the backend server and hide this
   backend server from external exposure.
 ```
