@@ -1,11 +1,11 @@
 # NGINX-Reverse-Proxy
 
-# The Architecture
+## The Architecture
 1. One Nginx server and one Backend server where the application is running on some port(eg. 3000)
 2. Client will hit Public IP of Nginx server, this Nginx server will work as reverse proxy server, where it get the request it will redirect the traffic to Backend Server's particular port.
 3. Allow all traffic in your both server as it is for testing purpose, otherwise for secure communication allow `http` on port `80` and `SSH` on port `22` in `Nginx` server and `http` on some port like `3000` in `Application` server.
 
-# Launch Flask Application on `Application` server
+## Launch Flask Application on `Application` server
 1. Update the packages
 ```bash
 sudo apt-get update
@@ -35,7 +35,7 @@ sudo apt install gunicorn
 nohup gunicorn --bind 0.0.0.0:<port> app:app >dev/null 2>&1 &
 ```
 
-# Set up Reverse Proxy on NGINX server
+## Set up Reverse Proxy on NGINX server
 1. Update the packages
 ```bash
 sudo apt-get update
@@ -66,11 +66,17 @@ sudo nginx -t
 sudo systemctl restart nginx.service
 ```
 
-# Browse the Public IP of NGINX server to get access of the Application
+## Browse the Public IP of NGINX server to get access of the Application
 `http://<Public_IP_of_NGINX_server>`
 ![image alt](https://github.com/souravhajra123/NGINX-Reverse-Proxy/blob/4abf8fca70dc69f2fb82cdc3886104da9ff39e55/P1.png)
 
-
+## Stop the Application
+```bash
+ps aux | grep gunicorn
+kill <PID>
+//or
+pkill gunicorn # To terminate all gunicorn processes
+```
 
 
 
