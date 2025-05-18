@@ -43,7 +43,7 @@ sudo apt install gunicorn
 nohup gunicorn --bind 0.0.0.0:<port> app:app >dev/null 2>&1 &
 ```
 
-## Set up Reverse Proxy on NGINX server
+## Set up Reverse Proxy on `NGINX` server
 1. Update the packages
 ```bash
 sudo apt-get update
