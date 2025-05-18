@@ -68,6 +68,7 @@ sudo systemctl restart nginx.service
 
 ## Browse the Public IP of NGINX server to get access of the Application
 `http://<Public_IP_of_NGINX_server>`
+
 ![image alt](https://github.com/souravhajra123/NGINX-Reverse-Proxy/blob/4abf8fca70dc69f2fb82cdc3886104da9ff39e55/P1.png)
 
 ## Stop the Application
